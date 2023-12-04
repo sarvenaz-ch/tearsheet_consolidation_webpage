@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	.center {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+	}
+
+	.clearfix:after{
+		content: '';
+		display:table;
+		clear: both;
+	}
+	 
+	.container {
+	    width: 960px;
+	    margin-left: auto;
+	    margin-right:auto;
+	    background-color: #D8D8D8;
+	}
+
+	.selection{
+		background-color: #d2c2f0;
+	}
+	.transactions{
+	    background-color: #96AFCF;
+	    width: 65%;
+	    float: left;
+	}
+	.transactions:after{
+    content: "THIS IS CSS TEXT"
+}
+	.bio {
+	    background-color: #9DBB61;
+	    width: 35%;
+	    float: right;
+	}
+	.chatbot {
+	    background-color: #C05046;
+	}
+
+	.button1 {
+		background-color: #008CBA;
+		font-size: 20px;
+		border-radius: 4px;
+		border:#008CBA;
+		width: 100%;
+		color: #FFFFFF;
+	}
+	.button1 span {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.5s;
+	}
+	.button1 span:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  right: -20px;
+	  transition: 0.5s;
+	}
+
+	.button1:hover span {
+		 padding-right: 25px;
+		}
+
+	.button1:hover span:after {
+		  opacity: 1;
+		  right: 0;
+		}
+
+	h1 {
+	  text-align: center;
+	}
+</style>
+	<body>
+        <div class="container">
+			
+			<h1> AI Can Help You Know Your Clients Better! </h1>
+
+            <div class = "selection">
+            	<h2> First, tell me who the client is. </h2>
+            	<label for="client">Select the client:</label> 
+				    <select name="client" id="client"> 
+				        <option value="rigatoni">Rigatoni</option> 
+				        <option value="dave">Dave</option> 
+				        <option value="pumpernickel">Pumpernickel</option> 
+				        <option value="reeses">Reeses</option> 
+				    </select>
+            </div>
+
+            <div class="transactions">
+                <h1>Client's interaction with the bank</h1>
+                	<p class="main-text">This is where a summary of transactions and services such as loans etc goes. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <h2>This is a second heading</h2>
+					<p class="main-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div> <!--main area-->
+
+            <div class = "bio">
+            	<h1> Bio </h1>
+            	<img src='profile_pic.jpeg' class="center" style="width:80%;"> 
+            	<p>
+					This is where a summary of tearsheet goes, probably just the bio, along with a button to email the tearsheet to the user
+				</p>
+
+				<div> 
+					<h3> Want the complete tearsheet Doc? I can send it to your inbox!</h3>
+					<button class = 'button1' style="vertical-align:middle">
+						<span>Get the Tearsheet</span>
+					</button>
+				</div>
+			</div> <!-- bio-->
+			
+			<div class='clearfix'></div>
+			
+			<div class = 'chatbot'>
+				<h1> Want to know more? I can help!</h1>
+				<p class="main-text"> This is where the chatbot goes </p>
+			</div>
+
+        </div>   <!-- end of class = 'container'-->
+    </body>
+</html>
